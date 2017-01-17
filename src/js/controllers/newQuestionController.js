@@ -57,12 +57,15 @@ let addNewQuestion = (main) => {
 			let divElem = document.getElementById("validCorrAnswr");
 			divElem.innerHTML = "Correct answer can not be empty";
 		} else{
-			newQuestion.correctAnswer = newQuestion.correctAnswer.trim().split(" ");
-			let childrenAnswr = main.getElementsByTagName("input");
+			newQuestion.correctAnswer = newQuestion.correctAnswer.trim().split(" ")
+												.map(function(item) {
+    											return parseInt(item, 10);
+												});
+			let childrenAnswr = main.getElementsByTagName("textarea");
 			for(let i = 0; i < childrenAnswr.length; i++){
 				newQuestion.answers.push(childrenAnswr[i].value);
 			}
-			// storage.addQuestion(newQuestion);
+			storage.addQuestion(newQuestion);
 			router.renderPage("Home", storage.getAdmin());
 		}
 	};

@@ -17,7 +17,7 @@ function controller(){
 		let questionNumber = questionData.questionNumber;
 
 		let btnNext = document.getElementById("idBtnNext");
-		if(questionNumber === listSize - 1){
+		if(questionNumber === listSize){
 			btnNext.innerHTML = "Show result";
 		} else {
 			btnNext.innerHTML = "Next";
@@ -26,8 +26,9 @@ function controller(){
 		btnNext.addEventListener("click", (evt) => {
 			if(question.answers.length === 0){
 				putResultFromTextArea(questionData, question.correctAnswer);
+			}else{
+				putResult(questionData, question.correctAnswer);
 			}
-			putResult(questionData, question.correctAnswer);
 			let questionNumber = questionData.questionNumber;
 			if(questionNumber !== listSize){
 				questionNumber++;
@@ -43,7 +44,7 @@ function controller(){
 
 let putResultFromTextArea = (data, correctAnswers) => {
 	let result = document.getElementById("idAnswer").value.toLowerCase().trim();
-	if(result === correctAnswers){
+	if(result.localeCompare(correctAnswers) === 0){
 		data.numberOfCorrectAnswers++;
 	}
 };
