@@ -1,0 +1,27 @@
+<div class="childContainer text-center">
+	<h4><b>Question {{questionNumber}}</b>:  {{question.question}}</h4>
+	<br>
+	<div id="idAnswers">
+		{{#ifCond question.answers.length 0}}
+	    		<textarea class="form-control" rows="1" id="idAnswer"></textarea>
+		{{else}}
+			{{#ifCond question.correctAnswer.length 1}}
+	    		{{#each question.answers}}
+					<div class="radio text-left">
+				  		<label><input type="radio" name="answerRadio">{{this}}</label>
+					</div>
+				{{/each}}
+			{{else}}
+			    {{#each question.answers}}
+					<div class="checkbox text-left">
+			  			<label><input type="checkbox" class="answerCheckbox" value="">{{this}}</label>
+					</div>
+				{{/each}}
+			{{/ifCond}}
+		{{/ifCond}}
+	</div>
+	<br>
+	<div class="form-group">
+		    <button type="button" id="idBtnNext" class="btn btn-default"></button>
+	</div>
+</div>

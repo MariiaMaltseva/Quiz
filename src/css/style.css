@@ -1,0 +1,126 @@
+.box{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.box a{
+	color: #42A5F5;
+}
+
+.btn-default{
+	color: #42A5F5;
+	background-color: black;
+	border-radius: 5px;
+	width: 100px;
+	font-weight: bold;
+}
+.navbar-inverse {
+	background-color: black;
+}
+
+.navbar-inverse .navbar-brand{
+	color: #42A5F5;
+	font-weight: bold;
+}
+
+#childNavbar ul li > a{
+	color: #42A5F5;
+}
+
+#childNavbar ul li > a:hover{
+	color: white;
+}
+
+#childNavbar ul li > a:focus{
+	color: white;
+	cursor: pointer;
+
+}
+
+label{
+	color: #42A5F5;
+}
+
+.nameNavbar{
+	color: #42A5F5;
+}
+
+hr{
+    background-color: #42A5F5;
+    height: 0.5px;
+}
+thead{
+    background-color: #42A5F5;
+    color: black;
+    align-items: center;
+    margin: 0 auto;
+}
+
+thead tr th{
+    text-align: center;
+}
+
+.table-responsive{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.table>tbody>tr>td{
+    padding-left: 30px;
+}
+
+.childContainer{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.result{
+	width: 40%;
+	margin: 0 auto;
+}
+
+#result {
+	color: #42A5F5;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+h2{
+	color: #42A5F5;
+	font-size: 30px;
+}
+.glyphicon {
+	font-size: 120%;
+}
+
+#question{
+	width: 50%;
+}
+#idAnswer{
+	width: 50%;
+}
+
+.add-more{
+	color: black;
+	background-color: #42A5F5;
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.delete{
+	color: black;
+	background-color: #42A5F5;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+a{
+	cursor: pointer;
+}
+.validation{
+	color: red;
+	font-size: 14px;
+}
